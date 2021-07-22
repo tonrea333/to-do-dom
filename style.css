@@ -1,0 +1,65 @@
+.box {
+display:flex;
+flex-direction: column;
+
+}
+
+
+#title {
+display:flex;
+flex-direction: column;
+    font-size: 45px;
+
+};
+
+.Text {
+    display:flex;
+    flex-direction: column;
+    height: 30px;
+    width: 90px;
+    border: gray;
+    flex-direction: column;
+    padding-top: 30px;
+    
+}
+.todoinput {
+    
+    border-color: gray;
+ 
+    margin-bottom: 7px;
+    
+    
+}
+#buttonhold {
+    display:flex;
+flex-direction: row;
+align-items: stretch;
+
+}
+
+#buttonone {
+    
+    background-color: #1f9554;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    margin-right: 7px;
+    border-radius: 5px;
+}
+#buttontwo {
+    
+    background-color: #F6c70d;
+    color: black;
+    text-align: center;
+    font-size: 13px;
+    margin-right: 7px;
+    border-radius: 5px;
+}
+#buttonthree {
+    
+    background-color: #ce2044;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 5px;
+}
