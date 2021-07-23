@@ -82,7 +82,9 @@ console.log(allredButton)
 allredButton.addEventListener("click", alltodoRemove);
 
 function alltodoRemove(){
-    orderList.remove(orderList.innerHTML)   
+    while(orderList.firstChild)
+    orderList.removeChild(orderList.firstChild) 
+    console.log(orderList)  
 }
 
 
