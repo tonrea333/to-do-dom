@@ -4,14 +4,16 @@ const allredButton = document.querySelector("#buttonthree");
 const listofTask = document.querySelector("output")
 const inputText = document.querySelector("input[type=text]")
 const orderList = document.querySelector("#todoTracker");
+const lineoutText = document.querySelectorAll(".classline");
 const taskMaster = [];
-const displayTodo = [];
+
 
 //Function to add task to todo list
 addButton.addEventListener("click", addClick);
-function addClick(event) {
+function addClick() {
+
     let stringText = inputText.value;
-    //textTask = inputText.value 
+    textTask = inputText.value
 
 
     taskMaster.push(stringText);
@@ -22,9 +24,14 @@ function addClick(event) {
 
         const minusArray = taskMaster.shift(1)
         orderList.innerHTML = orderList.innerHTML + "<li>" + x + "</li>";
-
+        console.log(x, "test")
         console.log(orderList)
-
+        //const a = orderList;
+        //const b = document.querySelector(".todoinput");
+        //const li = document.createElement("li");
+        //li.setAttribute("class", todoinput.value);
+        //li.appendChild(document.createTextNode(b.value))
+        //a.appendChild(li);
         //console.log(orderList)
     }
     //Function to line through todo task
@@ -32,6 +39,12 @@ function addClick(event) {
 
     function lineClick(event) {
         event.target.style.textDecoration = "line-through";
+        //Adds class to li with line-through to more easily call later
+
+        event.target.className = "classline";
+        console.log(taskMaster)
+        //orderList.appendChild("classline");
+        //lineoutText.classList.add("classline");
         //console.log(event.target)
     }
     //================================================
@@ -52,10 +65,10 @@ function addClick(event) {
     } removeText(inputText)
     //=================================================
 
-
-    //console.log(inputText.value)
-    //console.log(taskMaster)
 }
+//console.log(inputText.value)
+//console.log(taskMaster)
+//}
 //=======================
 //Function to remove line-through list items
 
@@ -64,16 +77,35 @@ taskButton.addEventListener("click", onetaskRemove);
 
 
 function onetaskRemove() {
-    orderList.removeChild(orderList)
-    
+    const a = orderList;
+    const b = inputText;
+    const c = inputText.value;
+    orderList.removeChild(c)
 
-    console.log("hello")
+
+    // const convertNode = Array.from(lineoutText);
+
+    //for(let x of convertNode){
+    //  console.log(convertNode)
+    //}
+
+
+    //for (let i = 0; i < taskMaster.length; i++ ){
+    //const removeMe = ("classline");
+    //lineoutText.className.remove(removeMe)
+    // }
+    console.log(lineoutText)
+
+    //orderList.remove(orderList.lineoutText)
+
+
+    //console.log("hello")
 
     //todoLineThrough.remove()
     console.log(orderList)
-    console.log(orderList.innerHTML)
-    console.log(orderList.innerText)
-console.log(allredButton)
+    //console.log(orderList.innerHTML)
+    //console.log(orderList.innerText)
+    //console.log(allredButton)
 }
 
 //=========================================
@@ -81,10 +113,10 @@ console.log(allredButton)
 
 allredButton.addEventListener("click", alltodoRemove);
 
-function alltodoRemove(){
-    while(orderList.firstChild)
-    orderList.removeChild(orderList.firstChild) 
-    console.log(orderList)  
+function alltodoRemove() {
+    while (orderList.firstChild)
+        orderList.removeChild(orderList.firstChild)
+    console.log(orderList)
 }
 
 
