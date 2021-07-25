@@ -77,10 +77,11 @@ taskButton.addEventListener("click", onetaskRemove);
 
 
 function onetaskRemove() {
-    const a = orderList;
-    const b = inputText;
-    const c = inputText.value;
-    orderList.removeChild(c)
+    let d = "<li>"+"classline";
+    if (d.orderList){
+        d.orderList.removeChild(d)
+        console.log(d.orderList,"test")
+    }
 
 
     // const convertNode = Array.from(lineoutText);
